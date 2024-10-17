@@ -54,33 +54,66 @@ import { Button } from "@material-tailwind/react";
 
 
 // CARRUSEL
-//export function CarouselTransition() {
+
+// export function CarouselTransition() {
 //     return (
-//       <Carousel autoplay={{ delay: 4000 }} transition={{ duration: 2 }} loop={true} className="rounded-xl">
-//         <img
-//           src={autoAudi}
-//           alt="Auto Audi"
-//           className="h-full w-full object-cover"
-//         />
-//         <img
-//           src={autoFerrari}
-//           alt="Auto Ferrari"
-//           className="h-full w-full object-cover"
-//         />
-//         <img
-//           src={autoTesla}
-//           alt="Auto Tesla"
-//           className="h-full w-full object-cover"
-//         />
+//       <Carousel
+//         autoplay={{ delay: 4000 }} // Autoplay con un intervalo de 4 segundos
+//         transition={{ duration: 2 }} // Duración de la transición de 2 segundos
+//         loop={true} // Para que el carrusel se repita en bucle
+//         className="rounded-xl relative"
+//       >
+//         {/* Contenedor Audi */}
+//         <div className="relative h-full w-full">
+//           {/* Texto detrás del auto */}
+//           <div className="absolute inset-0 flex justify-center items-center z-0">
+//             <h2 className="text-gray-200 text-8xl font-bold opacity-40">Audi</h2>
+//           </div>
+//           {/* Imagen del auto */}
+//           <img
+//             src={autoAudi}
+//             alt="Auto Audi"
+//             className="h-full w-full object-cover relative z-10"
+//           />
+//         </div>
+  
+//         {/* Contenedor Ferrari */}
+//         <div className="relative h-full w-full">
+//           {/* Texto detrás del auto */}
+//           <div className="absolute inset-0 flex justify-center items-center z-0">
+//             <h2 className="text-gray-200 text-8xl font-bold opacity-40">Ferrari</h2>
+//           </div>
+//           {/* Imagen del auto */}
+//           <img
+//             src={autoFerrari}
+//             alt="Auto Ferrari"
+//             className="h-full w-full object-cover relative z-10"
+//           />
+//         </div>
+  
+//         {/* Contenedor Tesla */}
+//         <div className="relative h-full w-full">
+//           {/* Texto detrás del auto */}
+//           <div className="absolute inset-0 flex justify-center items-center z-0">
+//             <h2 className="text-gray-200 text-8xl font-bold opacity-40">Tesla</h2>
+//           </div>
+//           {/* Imagen del auto */}
+//           <img
+//             src={autoTesla}
+//             alt="Auto Tesla"
+//             className="h-full w-full object-cover relative z-10"
+//           />
+//         </div>
 //       </Carousel>
 //     );
 //   }
 
+
 // CONTENEDOR PARA TÍTULO, BOTÓN Y CARRUSEL
-export function DefaultSection() {
+export function CombinedSection() {
   return (
-    <div className="flex flex-row items-center justify-between space-x-8">
-      {/* Contenedor del texto y botón */}
+    <div className="flex flex-row items-center justify-between space-x-8"> 
+      {/* Sección de texto y botón */}
       <div className="flex flex-col items-center">
         <Typography>
           Encuentra el auto de tus sueños con nosotros
@@ -104,34 +137,53 @@ export function DefaultSection() {
         </Button>
       </div>
 
-      {/* CARRUSEL */}
-      <div className="w-2/3">
-        <Carousel
-          autoplay={{ delay: 4000 }}
-          transition={{ duration: 2 }}
-          loop={true}
-          className="rounded-xl"
-        >
+      {/* Sección del carrusel */}
+      <Carousel
+        autoplay={{ delay: 4000 }} // Autoplay con un intervalo de 4 segundos
+        transition={{ duration: 2 }} // Duración de la transición de 2 segundos
+        loop={true} // Para que el carrusel se repita en bucle
+        className="rounded-xl relative w-1/2" // Puedes ajustar el ancho aquí
+      >
+        {/* Contenedor Audi */}
+        <div className="relative h-full w-full">
+          <div className="absolute inset-0 flex justify-center items-center z-0">
+            <h2 className="text-gray-200 text-8xl font-bold opacity-40">Audi</h2>
+          </div>
           <img
             src={autoAudi}
             alt="Auto Audi"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover relative z-10"
           />
+        </div>
+
+        {/* Contenedor Ferrari */}
+        <div className="relative h-full w-full">
+          <div className="absolute inset-0 flex justify-center items-center z-0">
+            <h2 className="text-gray-200 text-8xl font-bold opacity-40">Ferrari</h2>
+          </div>
           <img
             src={autoFerrari}
             alt="Auto Ferrari"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover relative z-10"
           />
+        </div>
+
+        {/* Contenedor Tesla */}
+        <div className="relative h-full w-full">
+          <div className="absolute inset-0 flex justify-center items-center z-0">
+            <h2 className="text-gray-200 text-8xl font-bold opacity-40">Tesla</h2>
+          </div>
           <img
             src={autoTesla}
             alt="Auto Tesla"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover relative z-10"
           />
-        </Carousel>
-      </div>
+        </div>
+      </Carousel>
     </div>
   );
 }
+
 
 
 // MARCAS
