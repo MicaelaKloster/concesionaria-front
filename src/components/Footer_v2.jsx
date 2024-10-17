@@ -22,15 +22,15 @@ export function FooterWithSocialLinks() {
     <footer className="relative w-full">
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          <Typography variant="h5" className="mb-6">
-            Material Tailwind
+          <Typography variant="h5" className="mb-6 text-azul">
+            Concesionaria
           </Typography>
           <div className="grid grid-cols-3 justify-between gap-4">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
                 <Typography
                   variant="small"
-                  color="blue-gray"
+                  color="text-azul"
                   className="mb-3 font-medium opacity-40"
                 >
                   {title}
