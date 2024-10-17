@@ -115,7 +115,7 @@ export function CombinedSection() {
     <div className="flex flex-row items-center justify-between space-x-8"> 
       {/* Sección de texto y botón */}
       <div className="flex flex-col items-center">
-        <Typography>
+        <Typography className="text-azul">
           Encuentra el auto de tus sueños con nosotros
         </Typography>
         <Button className="mt-4">
@@ -142,12 +142,12 @@ export function CombinedSection() {
         autoplay={{ delay: 4000 }} // Autoplay con un intervalo de 4 segundos
         transition={{ duration: 2 }} // Duración de la transición de 2 segundos
         loop={true} // Para que el carrusel se repita en bucle
-        className="rounded-xl relative w-1/2" // Puedes ajustar el ancho aquí
+        className="rounded-xl relative w-1/2" 
       >
         {/* Contenedor Audi */}
         <div className="relative h-full w-full">
           <div className="absolute inset-0 flex justify-center items-center z-0">
-            <h2 className="text-gray-200 text-8xl font-bold opacity-40">Audi</h2>
+            <h2 className="text-gris-200 text-8xl font-bold opacity-40">Audi</h2>
           </div>
           <img
             src={autoAudi}
@@ -159,7 +159,7 @@ export function CombinedSection() {
         {/* Contenedor Ferrari */}
         <div className="relative h-full w-full">
           <div className="absolute inset-0 flex justify-center items-center z-0">
-            <h2 className="text-gray-200 text-8xl font-bold opacity-40">Ferrari</h2>
+            <h2 className="text-gris-200 text-8xl font-bold opacity-40">Ferrari</h2>
           </div>
           <img
             src={autoFerrari}
@@ -171,7 +171,7 @@ export function CombinedSection() {
         {/* Contenedor Tesla */}
         <div className="relative h-full w-full">
           <div className="absolute inset-0 flex justify-center items-center z-0">
-            <h2 className="text-gray-200 text-8xl font-bold opacity-40">Tesla</h2>
+            <h2 className="text-gris-200 text-8xl font-bold opacity-40">Tesla</h2>
           </div>
           <img
             src={autoTesla}
